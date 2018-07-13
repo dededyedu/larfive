@@ -44,7 +44,7 @@
                 <div class="navbar-end">
                   <div class="navbar-item has-dropdown is-hoverable" role="navigation" aria-label="dropdown navigation">
                     @if (Auth::guest())
-                        <a class="navbar-link" href="{{route('login')}}">
+                        <a class="navbar-link" href="#">
                             Login
                         </a>
                       <div class="navbar-dropdown is-boxed">
@@ -76,19 +76,7 @@
               </div>
         </div>
       </nav>
-<section class="hero is-info is-bold m-t-50">
-        <div class="container has-text=centered">
-          <div class="hero-body">
-                <img src="{{asset('images/alton2.png')}}" alt="Alton" width="" height="30px">
-
-                <h2 class="subtitle">
-                  we are coming soon !
-              </h2>
-
-          </div>
-
-        </div>
-</section>
+        @yield('content')
     </div>
 
     <!-- Scripts -->
