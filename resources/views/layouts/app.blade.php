@@ -33,9 +33,25 @@
                   <a class="navbar-item is-tab" href="#">
                     About
                   </a>
-                  <a class="navbar-item is-tab" href="#">
-                    Product
-                  </a>
+                  <div class="navbar-item has-dropdown is-hoverable">
+                      <a class="navbar-link is-tab" href="#">
+                        Product
+                      </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="#">
+                            <p><span class="icon has-text-info"><i class="fas fa-info-circle"> </i></span><strong>FATHONAH 2.0</strong> </br>  <h class="is-size-7">Core Banking System</h></p>
+                        </a>
+                        <a class="navbar-item" href="#">
+                            <p><strong>INSAN 1.0</strong> </br>  <h class="is-size-7">Employee Management System</h></p>
+                        </a>
+                        <a class="navbar-item" href="#">
+                            <p><strong>BBS Mobi 2.0</strong> </br>  <h class="is-size-7">Mobile App</h></p>
+                        </a>
+                        <a class="navbar-item" href="#">
+                            <p><strong>PALU GADA</strong> </br>  <h class="is-size-7">Apa Lu Mau Gua Ada :D</h></p>
+                        </a>
+                    </div>
+                  </div>
                   <a class="navbar-item is-tab" href="#">
                     Contact
                   </a>
@@ -76,7 +92,11 @@
               </div>
         </div>
       </nav>
-        @yield('content')
+      <div class="container m-t-50">
+
+          @yield('content')
+
+      </div>
     </div>
 
     <!-- Scripts -->

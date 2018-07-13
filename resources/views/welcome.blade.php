@@ -33,9 +33,25 @@
                   <a class="navbar-item is-tab" href="#">
                     About
                   </a>
-                  <a class="navbar-item is-tab" href="#">
+              <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link is-tab" href="#">
                     Product
                   </a>
+                <div class="navbar-dropdown is-boxed">
+                    <a class="navbar-item" href="#">
+                        <p><strong>FATHONAH 2.0</strong> </br>  <h class="is-size-7">Core Banking System</h></p>
+                    </a>
+                    <a class="navbar-item" href="#">
+                        <p><strong>INSAN 1.0</strong> </br>  <h class="is-size-7">Employee Management System</h></p>
+                    </a>
+                    <a class="navbar-item" href="#">
+                        <p><strong>BBS Mobi 2.0</strong> </br>  <h class="is-size-7">Mobile App</h></p>
+                    </a>
+                    <a class="navbar-item" href="#">
+                        <p><strong>PALU GADA</strong> </br>  <h class="is-size-7">Apa Lu Mau Gua Ada :D</h></p>
+                    </a>
+                </div>
+              </div>
                   <a class="navbar-item is-tab" href="#">
                     Contact
                   </a>
@@ -76,19 +92,29 @@
               </div>
         </div>
       </nav>
-<section class="hero is-info is-bold m-t-50">
-        <div class="container has-text=centered">
-          <div class="hero-body">
-                <img src="{{asset('images/alton2.png')}}" alt="Alton" width="" height="30px">
+      <section class="hero is-info is-bold m-t-50">
+              <div class="container has-text=centered">
+                <div class="hero-body">
+                      <img src="{{asset('images/alton2.png')}}" alt="Alton" width="" height="30px">
 
-                <h2 class="subtitle">
-                  we are coming soon !
-              </h2>
+                      <h2 class="subtitle">
+                      <span class="icon has-text-info"><i class="fas fa-home"> </i>test</span>  we are nearly in touch !
+                    </h2>
 
-          </div>
+                </div>
 
-        </div>
-</section>
+              </div>
+      </section>
+      <!--footer-->
+      <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Alton</strong> are <a href="https://bhaktisumekar.co.id">Information Technology Company</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
+      </footer>
     </div>
 
     <!-- Scripts -->
