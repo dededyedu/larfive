@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="app">
@@ -38,18 +39,18 @@
                     Product
                   </a>
                 <div class="navbar-dropdown is-boxed">
-                    <a class="navbar-item" href="#">
-                        <p><strong>FATHONAH 2.0</strong> </br>  <h class="is-size-7">Core Banking System</h></p>
-                    </a>
-                    <a class="navbar-item" href="#">
-                        <p><strong>INSAN 1.0</strong> </br>  <h class="is-size-7">Employee Management System</h></p>
-                    </a>
-                    <a class="navbar-item" href="#">
-                        <p><strong>BBS Mobi 2.0</strong> </br>  <h class="is-size-7">Mobile App</h></p>
-                    </a>
-                    <a class="navbar-item" href="#">
-                        <p><strong>PALU GADA</strong> </br>  <h class="is-size-7">Apa Lu Mau Gua Ada :D</h></p>
-                    </a>
+                  <a class="navbar-item" href="#">
+                      <p><span class="icon"><i class="fa fa-bars"> </i></span><strong>FATHONAH 2.0</strong> </br>  <h class="is-size-7">Core Banking System</h></p>
+                  </a>
+                  <a class="navbar-item" href="#">
+                      <p><span class="icon"><i class="fa fa-address-book"></i></span><strong>INSAN 1.0</strong> </br>  <h class="is-size-7">Employee Management System</h></p>
+                  </a>
+                  <a class="navbar-item" href="#">
+                      <p><span class="icon"><i class="fa fa-mobile fa-2x"></i></span><strong>BBS Mobi 2.0</strong> </br>  <h class="is-size-7">Mobile App</h></p>
+                  </a>
+                  <a class="navbar-item" href="#">
+                      <p><span class="icon"><i class="fa fa-cog fa-spin fa-fw"></i></span><strong>PALU GADA</strong> </br>  <h class="is-size-7">Apa Lu Mau Gua Ada :D</h></p>
+                  </a>
                 </div>
               </div>
                   <a class="navbar-item is-tab" href="#">
@@ -59,34 +60,61 @@
 
                 <div class="navbar-end">
                   <div class="navbar-item has-dropdown is-hoverable" role="navigation" aria-label="dropdown navigation">
-                    @if (Auth::guest())
-                        <a class="navbar-link" href="{{route('login')}}">
-                            Login
-                        </a>
-                      <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="#">
-                            Join!
-                        </a>
-                      </div>
+
+                    @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
                     @else
-                      <div class="navbar-item has-dropdown" role="navigation" aria-label="dropdown navigation">
-                        <a class="navbar-link" href="#">
-                            Hi, deded
-                        </a>
+                      <a class="navbar-link" href="{{ route('login') }}">
+                        <span class="icon"><i class="fa fa-sign-in m-r-10"></i></span> Login
+                      </a>
                       <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="#">
-                            Profile
-                        </a>
-                        <a class="navbar-item" href="#">
-                            Setting
-                        </a>
-                        <hr class="navbar-devider">
-                        <a class="navbar-item" href="#">
-                          Logout
-                        </a>
+                      <a class="navbar-item" href="{{ route('register') }}">
+                        <span class="icon"><i class="fa fa-handshake-o m-r-10"></i></span> Join!
+                      </a>
                       </div>
+                    @endauth
+                </div>
+            @endif
+
+
+
+
+                    {{-- @if (Route::has('login'))
+                      @auth
+                        <div class="navbar-item has-dropdown" role="navigation" aria-label="dropdown navigation">
+                          <a class="navbar-link" href="#">
+                            <span class="icon"><i class="fa fa-user-circle-o m-r-10"></i></span>  Hi, deded
+                          </a>
+                        <div class="navbar-dropdown is-boxed">
+                          <a class="navbar-item" href="#">
+                            <span class="icon"><i class="fa fa-address-card m-r-10"></i></span>  Profile
+                          </a>
+                          <a class="navbar-item" href="#">
+                            <span class="icon"><i class="fa fa-cog m-r-10"></i></span>  Setting
+                          </a>
+                          <hr class="navbar-devider">
+                          <a class="navbar-item" href="#">
+                            <span class="icon"><i class="fa fa-sign-out m-r-10"></i></span>Logout
+                          </a>
+                        </div>
+                        </div>
+
+                    @else
+
+                      <a class="navbar-link" href="{{ route('login') }}">
+                        <span class="icon"><i class="fa fa-sign-in m-r-10"></i></span> Login
+                      </a>
+                      <div class="navbar-dropdown is-boxed">
+                      <a class="navbar-item" href="{{ route('register') }}">
+                        <span class="icon"><i class="fa fa-handshake-o m-r-10"></i></span> Join!
+                      </a>
                       </div>
-                    @endif
+
+
+                    @endauth
+                    @endif --}}
                   </div>
                 </div>
               </div>
@@ -98,7 +126,7 @@
                       <img src="{{asset('images/alton2.png')}}" alt="Alton" width="" height="30px">
 
                       <h2 class="subtitle">
-                      <span class="icon has-text-info"><i class="fas fa-home"> </i>test</span>  we are nearly in touch !
+                        we are nearly in touch !
                     </h2>
 
                 </div>

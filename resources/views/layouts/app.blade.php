@@ -12,13 +12,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="app">
       <nav class="navbar is-transparent has-shadow" role="navigation" aria-label="dropdown navigation">
         <div class="container">
             <div class="navbar-brand">
-                  <a class="navbar-item" href="{{route('home')}}">
+                  <a class="navbar-item" href="{{url('/')}}">
                       <img src="{{asset('images/larfive-logo.png')}}" alt="Bulma: a modern CSS framework based on Flexbox" width="" height="28">
                   </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -39,16 +40,16 @@
                       </a>
                     <div class="navbar-dropdown is-boxed">
                         <a class="navbar-item" href="#">
-                            <p><span class="icon has-text-info"><i class="fas fa-info-circle"> </i></span><strong>FATHONAH 2.0</strong> </br>  <h class="is-size-7">Core Banking System</h></p>
+                            <p><span class="icon"><i class="fa fa-bars"> </i></span><strong>FATHONAH 2.0</strong> </br>  <h class="is-size-7">Core Banking System</h></p>
                         </a>
                         <a class="navbar-item" href="#">
-                            <p><strong>INSAN 1.0</strong> </br>  <h class="is-size-7">Employee Management System</h></p>
+                            <p><span class="icon"><i class="fa fa-address-book"></i></span><strong>INSAN 1.0</strong> </br>  <h class="is-size-7">Employee Management System</h></p>
                         </a>
                         <a class="navbar-item" href="#">
-                            <p><strong>BBS Mobi 2.0</strong> </br>  <h class="is-size-7">Mobile App</h></p>
+                            <p><span class="icon"><i class="fa fa-mobile fa-2x"></i></span><strong>BBS Mobi 2.0</strong> </br>  <h class="is-size-7">Mobile App</h></p>
                         </a>
                         <a class="navbar-item" href="#">
-                            <p><strong>PALU GADA</strong> </br>  <h class="is-size-7">Apa Lu Mau Gua Ada :D</h></p>
+                            <p><span class="icon"><i class="fa fa-cog fa-spin fa-fw"></i></span><strong>PALU GADA</strong> </br>  <h class="is-size-7">Apa Lu Mau Gua Ada :D</h></p>
                         </a>
                     </div>
                   </div>
@@ -60,12 +61,12 @@
                 <div class="navbar-end">
                   <div class="navbar-item has-dropdown is-hoverable" role="navigation" aria-label="dropdown navigation">
                     @if (Auth::guest())
-                        <a class="navbar-link" href="#">
-                            Login
+                        <a class="navbar-link" href="{{ route('login') }}">
+                          <span class="icon"><i class="fa fa-sign-in m-r-10"></i></span>  Login
                         </a>
                       <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="#">
-                            Join!
+                        <a class="navbar-item" href="{{ route('register') }}">
+                          <span class="icon"><i class="fa fa-handshake-o m-r-10"></i></span>   Join!
                         </a>
                       </div>
                     @else
@@ -92,7 +93,7 @@
               </div>
         </div>
       </nav>
-      <div class="container m-t-50">
+      <div class="container m-t-30">
 
           @yield('content')
 
